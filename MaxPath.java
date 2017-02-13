@@ -34,7 +34,7 @@ public class MaxPath {
 					 max = sum;	
 				 }
 			}
-			else if((parts[i].length() - parts[i].replace(" ", "").length()) > count) {
+		/*	else if((parts[i].length() - parts[i].replace(" ", "").length()) > count) {
 			    count+=1;
 				sum = sum + parts[i].length() - 4 + 1;
 				mp = new MaxPath(parts[i]);
@@ -42,7 +42,7 @@ public class MaxPath {
 				if(parts[i].contains(".") && max  < sum) { 
 					 max = sum;	
 				 }
-			}
+			}*/
 			else {
 				prev = parts[i].length() - parts[i].replace("\t", "").length();
 				while(!st.isEmpty() && prev <= count) {
@@ -66,7 +66,7 @@ public class MaxPath {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String path = "dir\n\ta\n\tfile.ext";
+		String path = "dir1\n\tdir11\n\tdir12\n\t\tpicture.jpeg\n\t\tdir121\n\t\tfile1.txt\ndir2\n\tfile2.gif";
 		MaxPath pm = new MaxPath();
 		System.out.println(pm.maxLength(path));
 
