@@ -5,6 +5,7 @@ public class Problem1 {
 	public int solution(int n) {
 		String s = String.valueOf(n);
 		String str;
+
 		System.out.println(s);
 		int temp = 0;
 		for(int i = 0; i < s.length() - 1 ; i++) {
@@ -23,6 +24,10 @@ public class Problem1 {
 		// TODO Auto-generated method stub
 		Problem1 p1 = new Problem1();
 		p1.solution(623315);
+		String str1 = "file.txt";
+		
+		str1 = str1.substring(str1.indexOf('.')+1, str1.length() );
+		System.out.println(str1 + " " + str1.length());
 	}
 
 }
